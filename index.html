@@ -30,7 +30,6 @@
                     <a href="index.html#services">Services</a>
                     <a href="index.html#about">About</a>
                     <a href="index.html#projects">Projects</a>
-                    <a href="index.html#service-areas">Service Areas</a>
                     <a href="index.html#contact">Contact</a>
                     <a href="tel:+19059227868" class="nav-phone">(905) 922-7868</a>
                 </nav>
@@ -247,84 +246,6 @@
         </div>
     </section>
 
-    <section id="service-areas" class="section section-service-areas">
-        <div class="container">
-            <div class="section-head">
-                <h2 class="section-title">Service Areas</h2>
-                <p class="section-subtitle">Communities we serve across Ontario</p>
-            </div>
-            <div class="service-areas-grid">
-                <ul class="service-areas-list">
-                    <li>Ajax</li>
-                    <li>Bowmanville</li>
-                    <li>Burlington</li>
-                    <li>Concord</li>
-                    <li>Forest Hill</li>
-                    <li>Hamilton</li>
-                    <li>King City</li>
-                    <li>Maple</li>
-                    <li>Napanee</li>
-                    <li>Orangeville</li>
-                    <li>Port Hope</li>
-                    <li>Scarborough</li>
-                    <li>The Beaches</li>
-                    <li>Unionville</li>
-                    <li>Whitby</li>
-                </ul>
-                <ul class="service-areas-list">
-                    <li>Aurora</li>
-                    <li>Bridle Path</li>
-                    <li>Caledon</li>
-                    <li>East York</li>
-                    <li>Georgetown</li>
-                    <li>Keswick</li>
-                    <li>Lindsay</li>
-                    <li>Mississauga</li>
-                    <li>Newmarket</li>
-                    <li>Oshawa</li>
-                    <li>Port Perry</li>
-                    <li>Schomberg</li>
-                    <li>Thornhill</li>
-                    <li>Uxbridge</li>
-                    <li>Woodbridge</li>
-                </ul>
-                <ul class="service-areas-list">
-                    <li>Belleville</li>
-                    <li>Brampton</li>
-                    <li>Cambridge</li>
-                    <li>Etobicoke</li>
-                    <li>Guelph</li>
-                    <li>Kitchener</li>
-                    <li>Listowel</li>
-                    <li>Markham</li>
-                    <li>North York</li>
-                    <li>Peterborough</li>
-                    <li>Rosedale</li>
-                    <li>St. Catharines</li>
-                    <li>Toronto</li>
-                    <li>Vaughan</li>
-                    <li>York Mills</li>
-                </ul>
-                <ul class="service-areas-list">
-                    <li>Bolton</li>
-                    <li>Brantford</li>
-                    <li>Cobourg</li>
-                    <li>Fergus</li>
-                    <li>Halton Hills</li>
-                    <li>Kleinburg</li>
-                    <li>London</li>
-                    <li>Milton</li>
-                    <li>Oakville</li>
-                    <li>Pickering</li>
-                    <li>Richmond Hill</li>
-                    <li>Stouffville</li>
-                    <li>Trenton</li>
-                    <li>Waterloo</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
     <section id="contact" class="section section-contact">
         <div class="container">
             <div class="contact-grid">
@@ -351,27 +272,33 @@
                         </div>
                     </div>
                 </div>
-                <form class="contact-form">
+                <form class="contact-form" id="contact-form" action="#" method="post">
+                    <input type="text" name="botcheck" class="contact-form-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+                    <p class="contact-form-status" id="contact-form-status" role="status" aria-live="polite" hidden></p>
                     <div class="form-row">
-                        <input type="text" name="firstName" placeholder="First name *" required>
-                        <input type="text" name="lastName" placeholder="Last name *" required>
+                        <input type="text" name="firstName" placeholder="First name *" required autocomplete="given-name">
+                        <input type="text" name="lastName" placeholder="Last name *" required autocomplete="family-name">
                     </div>
-                    <input type="email" name="email" placeholder="Email *" required>
-                    <input type="tel" name="phone" placeholder="Phone * (000) 000-0000" required>
-                    <input type="text" name="address" placeholder="Address *" required>
-                    <select name="service">
+                    <input type="email" name="email" placeholder="Email *" required autocomplete="email">
+                    <input type="tel" name="phone" placeholder="Phone * (000) 000-0000" required autocomplete="tel">
+                    <input type="text" name="address" placeholder="Address *" required autocomplete="street-address">
+                    <select name="service" aria-label="Service type">
                         <option value="">Select service type</option>
+                        <option value="interlock">Interlock / Interlocking</option>
+                        <option value="deck">Deck</option>
+                        <option value="fence">Fence</option>
                         <option value="pool">Pool</option>
-                        <option value="asphalt">Asphalt</option>
+                        <option value="landscaping">Landscaping</option>
                         <option value="concrete">Concrete</option>
-                        <option value="stonework-repair">Stonework Repair</option>
-                        <option value="power-washing">Power Washing</option>
-                        <option value="asphalt-sealing">Asphalt Sealing</option>
-                        <option value="rennovation">Rennovation</option>
+                        <option value="asphalt">Asphalt</option>
+                        <option value="asphalt-sealing">Asphalt sealing</option>
+                        <option value="stonework-repair">Stonework repair</option>
+                        <option value="power-washing">Power washing</option>
+                        <option value="renovation">Renovation</option>
                         <option value="other">Other</option>
                     </select>
                     <textarea name="message" placeholder="Project details (optional)" rows="4"></textarea>
-                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                    <button type="submit" class="btn btn-primary btn-block" id="contact-form-submit">Submit</button>
                 </form>
             </div>
         </div>
@@ -425,10 +352,6 @@
                         <li class="footer-contact-row">
                             <span class="footer-contact-icon"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
                             <a href="mailto:info@zeroconstruction.ca">Contact Us</a>
-                        </li>
-                        <li class="footer-contact-row">
-                            <span class="footer-contact-icon"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
-                            <a href="#service-areas">Service Areas</a>
                         </li>
                     </ul>
                 </div>

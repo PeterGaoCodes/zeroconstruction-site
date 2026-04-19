@@ -1,6 +1,6 @@
 # Zero Construction 网站
 
-
+参考 [Action Home Services](https://actionhomeservices.ca/) 设计的建筑公司官网。
 
 ## 使用方式
 
@@ -24,7 +24,7 @@ npx serve
 
 ## 联系方式（可修改）
 
-
+- **电话**: (647) 937-1023
 - **邮箱**: info@zeroconstruction.ca
 - **服务区域**: 多伦多及GTA
 

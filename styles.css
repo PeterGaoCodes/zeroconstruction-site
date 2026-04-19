@@ -718,46 +718,6 @@ body {
     cursor: default;
 }
 
-/* Service areas — Ontario communities (single-page) */
-.section-service-areas {
-    background: var(--color-white);
-}
-
-.service-areas-grid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: var(--space-lg) var(--space-2xl);
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.service-areas-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.service-areas-list li {
-    position: relative;
-    padding-left: 1.1rem;
-    margin-bottom: 0.45rem;
-    font-family: var(--font-body);
-    font-size: 0.9375rem;
-    line-height: 1.45;
-    color: var(--color-text);
-}
-
-.service-areas-list li::before {
-    content: ">";
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: var(--color-primary);
-    font-weight: 700;
-    font-size: 0.7rem;
-    line-height: 1.45;
-}
-
 /* Testimonials */
 .section-testimonials {
     background: var(--color-bg);
@@ -857,10 +817,47 @@ body {
 }
 
 .contact-form {
+    position: relative;
     background: var(--color-white);
     padding: var(--space-xl);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
+}
+
+.contact-form-honey {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.contact-form-status {
+    margin: 0 0 var(--space-md);
+    padding: var(--space-md);
+    border-radius: var(--radius);
+    font-size: 0.9375rem;
+    line-height: 1.45;
+}
+
+.contact-form-status[hidden] {
+    display: none;
+}
+
+.contact-form-status--success {
+    background: rgba(26, 95, 74, 0.1);
+    border: 1px solid rgba(45, 138, 110, 0.45);
+    color: var(--color-primary-dark);
+}
+
+.contact-form-status--error {
+    background: rgba(160, 45, 45, 0.08);
+    border: 1px solid rgba(160, 45, 45, 0.35);
+    color: #5c1f1f;
 }
 
 .form-row {
@@ -869,7 +866,7 @@ body {
     gap: var(--space-md);
 }
 
-.contact-form input,
+.contact-form input:not(.contact-form-honey),
 .contact-form select,
 .contact-form textarea {
     display: block;
@@ -882,7 +879,7 @@ body {
     border-radius: var(--radius);
 }
 
-.contact-form input:focus,
+.contact-form input:not(.contact-form-honey):focus,
 .contact-form select:focus,
 .contact-form textarea:focus {
     outline: none;
@@ -1112,11 +1109,6 @@ body {
     .testimonials-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
-    .service-areas-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: var(--space-md) var(--space-xl);
-    }
 }
 
 @media (max-width: 768px) {
@@ -1214,10 +1206,6 @@ body {
     }
 
     .form-row {
-        grid-template-columns: 1fr;
-    }
-
-    .service-areas-grid {
         grid-template-columns: 1fr;
     }
 
