@@ -1,6 +1,6 @@
 # Zero Construction 网站
 
-参考 [Action Home Services](https://actionhomeservices.ca/) 设计的建筑公司官网。
+
 
 ## 使用方式
 
